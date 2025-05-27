@@ -1,0 +1,37 @@
+# نادیده گرفتن پوشه‌ها و فایل‌های سیستمی ویندوز
+AppData/
+Application Data/
+Cookies/
+Documents/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+NTUSER*
+ntuser*
+
+# نادیده گرفتن فایل‌های غیرمرتبط
+.bash_history
+.gitconfig
+.lmstudio*
+.node-red/
+.node_repl_history
+.vscode/
+3D Objects/
+Contacts/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+Music/
+OpenVPN/
+Rainway, Inc/
+Saved Games/
+Searches/
+Tracing/
+Videos/
+filimo-dm.db
