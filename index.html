@@ -338,7 +338,7 @@
 
     .golden-border::after,
     .golden-border-container::after {
-      display: none;
+      display: inside;
     }
 
     .golden-border-container {
@@ -636,7 +636,7 @@
     }
 
     .header-text h2 {
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-family: 'Vazirmatn', sans-serif;
       opacity: 0;
       visibility: hidden;
@@ -754,15 +754,11 @@
         left: 8px;
       }
       .header-text h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       .section-divider {
         margin: 20px auto;
         height: 6px;
-      }
-      .section-divider:first-of-type {
-        height: 12px;
-        width: 100%;
       }
       .products-grid, .domains-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -850,7 +846,7 @@
         left: 5px;
       }
       .header-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
       .hero {
         height: 200px;
@@ -893,7 +889,7 @@
       background: linear-gradient(90deg, #3C2F2F, var(--gold-1));
       box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       margin: 40px auto;
       max-width: 1200px;
     }
@@ -936,8 +932,8 @@
     }
 
     .product-card {
-      background: rgba(0, 0, 0, 0.4);
-      border: 2px solid var(--gold-1);
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid var(--gold-3);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
@@ -961,7 +957,7 @@
 
     .product-card h3 {
       font-size: 1.3rem;
-      color: var(--gold-1);
+      color: var(--gold-3);
       margin-bottom: 10px;
     }
 
@@ -984,7 +980,7 @@
       background: var(--dark-bg);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px);
-      border: 2px solid var(--gold-1);
+      border: 2px solid var(--gold-3);
       border-radius: 20px;
       padding: 40px;
       box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
@@ -1003,7 +999,7 @@
 
     .info-section h1 {
       font-size: 2rem;
-      color: var(--gold-1);
+      color: var(--gold-3);
       margin-bottom: 30px;
       position: relative;
     }
@@ -1082,14 +1078,14 @@
       margin: 50px auto;
       padding: 30px;
       background: rgba(0, 0, 0, 0.6);
-      border: 2px solid var(--gold-1);
+      border: 2px solid var(--gold-3);
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
     }
 
     .why-talakub-section h2, .faq-section h2, .articles-section h2, .news-section h2, .blog-section h2, .other-domains-section h2 {
       font-size: 2rem;
-      color: var(--gold-1);
+      color: var(--gold-3);
       margin-bottom: 25px;
       text-align: center;
     }
@@ -1309,20 +1305,20 @@
       font-size: 1rem;
       color: #FFFFFF;
       text-align: center;
-      padding: 0 10px;
+      padding: 10px;
       text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
     }
 
     .domain-card h3, .domain-card p {
-      display: none;
+      display: inside;
     }
 
     .price-estimate-section {
-      max-width: 600px;
+      max-width: fullwidth;
       margin: 50px auto;
       padding: 20px;
       background: rgba(0, 0, 0, 0.95);
-      border: 2px solid var(--gold-1);
+      border: 2px solid var(--gold-3);
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
       text-align: center;
@@ -1330,7 +1326,7 @@
 
     .price-estimate-section h2 {
       font-size: 1.8rem;
-      color: var(--gold-1);
+      color: var(--gold-2);
       margin-bottom: 15px;
     }
 
@@ -1429,9 +1425,9 @@
             </div>
         </div>
         <div class="header-text">
-          <h2>طلاکوب ریسک نیست</h2>
-          <h2>اگر هم ریسک باشه</h2>
-          <h2>پاداش بزرگی در انتظارتونه</h2>
+          <h2>دامنه ارزشمند طلاکوب دات کام</h2>
+          <h2>کوتاه، معنادار و به یاد ماندنی</h2>
+          <h2>مناسب برندهای لوکس در صنعت طلا و جواهرات</h2>
         </div>
     </header>
 
@@ -1451,13 +1447,13 @@
         <a href="/articles.html" title="مقالات">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <title>مقالات</title>
-                <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/>
+                <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 0 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/>
             </svg>
         </a>
         <a href="/blog.html" title="وبلاگ">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <title>وبلاگ</title>
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9-1-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
             </svg>
         </a>
     </nav>
@@ -1567,7 +1563,7 @@
                     <article class="article-card reverse" role="article">
                         <h3>داستان موفقیت CarInsurance.com: دامنه‌ای که صنعت بیمه را متحول کرد</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/CK8Rgjsg/Car-Insurance.png" alt="لوگوی CarInsurance.com مرتبط با موفقیت در صنعت بیمه" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/nr4Lzq5B/Car-Insurance.png" alt="لوگوی CarInsurance.com مرتبط با موفقیت در صنعت بیمه" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
                                     دامنه CarInsurance.com در سال ۲۰۱۰ به قیمت ۴۹.۷ میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به افزایش ۳۰۰ درصدی ترافیک ارگانیک و رشد قابل‌توجه درآمد شرکت شد.
@@ -1591,15 +1587,15 @@
                     </article>
 
                     <article class="article-card" role="article">
-                        <h3>داستان موفقیت Voice.com: دامنه‌ای برای آینده بلاکچین</h3>
+                        <h3>داستان موفقیت Voice: دامنه‌ای برای آینده بلاکچین</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/9FSXQDMF/voice.jpg" alt="لوگوی Voice.com مرتبط با فناوری بلاکچین" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/yxcDZMJJ/voice.jpg" alt="لوگوی Voice.com مرتبط با فناوری بلاکچین" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
-                                    دامنه Voice.com در سال ۲۰۱۹ به قیمت ۳۰ میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به جذب ۱۵۱,۰۰۰ بازدیدکننده ماهانه و افزایش اعتبار برند در صنعت بلاکچین شد.
+                                    دامنه Voice.com در سال 1398 به قیمت 30 میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به جذب 151,000 بازدیدکننده ماهانه و افزایش اعتبار برند در صنعت بلاکچین شد.
                                 </p>
                                 <p>
-                                    در سال ۲۰۱۹، شرکت بلاکچین Block.one دامنه Voice.com را از MicroStrategy خریداری کرد. این دامنه برای پلتفرم چت صوتی مبتنی بر بلاکچین آن‌ها انتخاب شد. کلمه "Voice" نه‌تنها کوتاه و به‌یادماندنی بود، بلکه به ایده دموکراتیزه کردن ارتباطات در فناوری بلاکچین اشاره داشت.
+                                    در سال 1398، شرکت بلاکچین Block.one دامنه Voice.com را از MicroStrategy خریداری کرد. این دامنه برای پلتفرم چت صوتی مبتنی بر بلاکچین آن‌ها انتخاب شد. کلمه "Voice" نه‌تنها کوتاه و به‌یادماندنی بود، بلکه به ایده دموکراتیزه کردن ارتباطات در فناوری بلاکچین اشاره داشت.
                                 </p>
                                 <p>
                                     دامنه Voice.com حس نوآوری و اعتماد را منتقل می‌کرد و به Block.one کمک کرد تا در صنعت بلاکچین برجسته شود. به همین ترتیب، دامنه طلاکوب حس کیفیت و اعتبار را برای برندهای طلا و جواهرات منتقل می‌کند.
@@ -1608,7 +1604,7 @@
                         </div>
                         <div class="article-fullwidth">
                             <p>
-                                پس از خرید دامنه، Voice.com به سرعت توجه فعالان صنعت بلاکچین را جلب کرد و گزارش‌ها نشان می‌دهد که وب‌سایت حدود ۱۵۱,۰۰۰ بازدیدکننده ماهانه جذب کرده است. اگرچه بازده سرمایه‌گذاری هنوز مورد بحث است، دامنه Voice.com به Block.one کمک کرد تا برند خود را به عنوان یک بازیگر اصلی در فناوری بلاکچین تثبیت کند. نام کوتاه و مرتبط با محصول، رتبه‌بندی سئو را بهبود بخشید و ترافیک ارگانیک را افزایش داد. این دامنه همچنین اعتماد کاربران را جلب کرد، زیرا نامی حرفه‌ای و آینده‌نگرانه به نظر می‌رسید.
+                                پس از خرید دامنه، Voice.com به سرعت توجه فعالان صنعت بلاکچین را جلب کرد و گزارش‌ها نشان می‌دهد که وب‌سایت حدود 151,000 بازدیدکننده ماهانه جذب کرده است. اگرچه بازده سرمایه‌گذاری هنوز مورد بحث است، دامنه Voice.com به Block.one کمک کرد تا برند خود را به عنوان یک بازیگر اصلی در فناوری بلاکچین تثبیت کند. نام کوتاه و مرتبط با محصول، رتبه‌بندی سئو را بهبود بخشید و ترافیک ارگانیک را افزایش داد. این دامنه همچنین اعتماد کاربران را جلب کرد، زیرا نامی حرفه‌ای و آینده‌نگرانه به نظر می‌رسید.
                             </p>
                             <p>
                                 از منظر بازاریابی، دامنه Voice.com به Block.one امکان داد تا در کنفرانس‌ها، رسانه‌ها و کمپین‌های دیجیتال به راحتی قابل شناسایی باشد. این دامنه در گفت‌وگوهای صنعت بلاکچین به سرعت جا افتاد. این داستان نشان می‌دهد که یک دامنه استراتژیک مانند طلاکوب می‌تواند چگونه به تقویت هویت برند و جذب مخاطب کمک کند، حتی در صنایع نوظهور. برای اطلاعات بیشتر درباره خرید دامنه طلاکوب، <a href="#main-content">اینجا کلیک کنید</a>.
@@ -1619,13 +1615,13 @@
                     <article class="article-card reverse" role="article">
                         <h3>داستان موفقیت ماندی: از dapulse به یک پلتفرم مدیریت پروژه جهانی</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/CL65nvv0/Monday.jpg" alt="لوگوی Monday.com مرتبط با مدیریت پروژه" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/tCGZj4fF/Monday.jpg" alt="لوگوی Monday.com مرتبط با مدیریت پروژه" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
-                                    دامنه monday.com در سال ۲۰۱۷ به قیمت ۲۵۰,۰۰۰ دلار خریداری شد. این سرمایه‌گذاری منجر به رشد کاربران از ۳۵۰,۰۰۰ به ۱۲۷,۰۰۰ مشتری و درآمد ۱۶۱ میلیون دلاری تا سال ۲۰۲۰ شد.
+                                    دامنه monday.com در سال 1396 به قیمت 250,000 دلار خریداری شد. این سرمایه‌گذاری منجر به رشد کاربران از 350,000 به 127,000 مشتری و درآمد 161 میلیون دلاری تا سال 1399 شد.
                                 </p>
                                 <p>
-                                    ماندی (monday.com) در سال ۲۰۱۴ با نام "dapulse" و دامنه dapulse.com فعالیت خود را آغاز کرد. این نام، اگرچه خلاقانه بود، اما برای کاربران گیج‌کننده و فاقد ارتباط مستقیم با مدیریت پروژه بود. در سال ۲۰۱۷، تیم تصمیم گرفت نام و دامنه را به monday.com تغییر دهد.
+                                    ماندی (monday.com) در سال 1393 با نام "dapulse" و دامنه dapulse.com فعالیت خود را آغاز کرد. این نام، اگرچه خلاقانه بود، اما برای کاربران گیج‌کننده و فاقد ارتباط مستقیم با مدیریت پروژه بود. در سال 1396، تیم تصمیم گرفت نام و دامنه را به monday.com تغییر دهد.
                                 </p>
                                 <p>
                                     دامنه monday.com کوتاه، ساده و به‌یادماندنی بود و مستقیماً با ایده مدیریت و برنامه‌ریزی مرتبط بود. به همین ترتیب، دامنه طلاکوب حس لوکس و اعتبار را برای برندهای طلا و جواهرات منتقل می‌کند.
@@ -1634,10 +1630,10 @@
                         </div>
                         <div class="article-fullwidth">
                             <p>
-                                پس از تغییر دامنه، ماندی شاهد رشد چشمگیری بود. تعداد کاربران از ۳۵۰,۰۰۰ نفر در سال ۲۰۱۷ به بیش از ۱۲۷,۰۰۰ مشتری در سال ۲۰۲۰ افزایش یافت. درآمد شرکت نیز به ۱۶۱ میلیون دلار در سال ۲۰۲۰ رسید، که نشان‌دهنده تأثیر مستقیم دامنه جدید بر جذب مشتری و افزایش فروش بود. دامنه monday.com به دلیل سادگی و ارتباط با مدیریت پروژه، رتبه‌بندی سئو را بهبود بخشید و ترافیک ارگانیک را تا ۲۰۰٪ افزایش داد. این دامنه همچنین اعتماد کاربران را جلب کرد، زیرا نامی حرفه‌ای و مرتبط به نظر می‌رسید.
+                                پس از تغییر دامنه، ماندی شاهد رشد چشمگیری بود. تعداد کاربران از 350,000 نفر در سال 1396 به بیش از 127,000 مشتری در سال 1399 افزایش یافت. درآمد ماهانه نیز به دلیل سادگی و افزایش فروش پایگاه کاربران، افزایش یافت. دامنه monday.com به دلیل سادگی و ارتباط با مدیریت پروژه، رتبه‌بندی سئو را بهبود بخشید و ترافیک ارگانیک را تا 200٪ افزایش داد. این دامنه همچنین اعتماد کاربران را جلب کرد، زیرا نامی حرفه‌ای و مرتبط به نظر می‌رسید.
                             </p>
                             <p>
-                                از منظر بازاریابی، دامنه monday.com به ماندی امکان داد تا به سرعت در بازار فناوری جا بیفتد. این دامنه در تبلیغات، کمپین‌های ایمیلی و گفت‌وگوهای روزمره به راحتی قابل اشتراک بود. در نتیجه، ماندی به یکی از پیشروترین پلتفرم‌های مدیریت پروژه تبدیل شد و در سال ۲۰۲۱ ارزش بازار آن به بیش از ۷ میلیارد دلار رسید. این داستان نشان می‌دهد که یک دامنه استراتژیک مانند طلاکوب می‌تواند چگونه به رشد انفجاری یک کسب‌وکار کمک کند. برای اطلاعات بیشتر درباره خرید دامنه طلاکوب، <a href="#main-content">اینجا کلیک کنید</a>.
+                                از منظر بازاریابی، دامنه monday.com به ماندی امکان داد تا به سرعت در بازار فناوری جا بیفتد. این دامنه در تبلیغات، کمپین‌های ایمیلی و گفت‌وگوهای روزمره به راحتی قابل اشتراک بود. در نتیجه، ماندی به یکی از پیشروترین پلتفرم‌های مدیریت پروژه تبدیل شد و در سال 1400 ارزش بازار آن به بیش از حد انتظار رسید. این داستان نشان می‌دهد که یک دامنه استراتژیک مانند طلاکوب می‌تواند چگونه به رشد انفجاری یک کسب‌وکار کمک کند. برای اطلاعات بیشتر درباره خرید دامنه طلاکوب، <a href="#main-content">اینجا کلیک کنید</a>.
                             </p>
                         </div>
                     </article>
@@ -1645,13 +1641,13 @@
                     <article class="article-card" role="article">
                         <h3>داستان موفقیت اسکوئر: از Squirrel به یک نام تجاری قدرتمند</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/Cx3KmRT6/square.gif" alt="لوگوی Square.com مرتبط با پرداخت موبایلی" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/T1MwftkT/square.gif" alt="لوگوی Square.com مرتبط با پرداخت موبایلی" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
-                                    دامنه Square.com در سال ۲۰۰۹ به قیمت تقریبی ۱ میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به افزایش ۴۰۰ درصدی تراکنش‌ها و رشد ۲۵۰ درصدی ترافیک ارگانیک شد.
+                                    دامنه Square.com در سال 1388 به قیمت تقریبی 1 میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به افزایش 400 درصدی تراکنش‌ها و رشد 250 درصدی ترافیک ارگانیک شد.
                                 </p>
                                 <p>
-                                    اسکوئر (Square) در سال ۲۰۰۹ با نام "Squirrel" و دامنه‌ای غیرمرتبط شروع به کار کرد. این نام، اگرچه خلاقانه بود، اما ارتباطی با خدمات پرداخت موبایلی که جک دورسی و تیمش ارائه می‌دادند نداشت. در همان سال، تیم تصمیم گرفت نام و دامنه را به Square.com تغییر دهد.
+                                    اسکوئر (Square) در سال 1388 با نام "Squirrel" و دامنه‌ای غیرمرتبط شروع به کار کرد. این نام، اگرچه خلاقانه بود، اما ارتباطی با خدمات پرداخت موبایلی که جک دورسی و تیمش ارائه می‌دادند نداشت. در همان سال، تیم تصمیم گرفت نام و دامنه را به Square.com تغییر دهد.
                                 </p>
                                 <p>
                                     دامنه Square.com کوتاه، واضح و به‌یادماندنی بود و حس دقت و اعتماد را منتقل می‌کرد. این دامنه نیز حس اعتبار را برای برند شما به ارمغان می‌آورد.
@@ -1660,7 +1656,7 @@
                         </div>
                         <div class="article-fullwidth">
                             <p>
-                                در عرض یک سال پس از تغییر دامنه، تعداد تراکنش‌های پردازش‌شده توسط اسکوئر بیش از ۴۰۰٪ افزایش یافت، که بخش عمده آن به دلیل برندینگ قوی و سهولت اشتراک‌گذاری دامنه بود. دامنه Square.com همچنین تأثیر قابل‌توجهی بر سئو داشت. نام کوتاه و مرتبط با محصول، رتبه‌بندی اسکوئر را در موتورهای جستجو بهبود بخشید و ترافیک ارگانیک را تا ۲۵۰٪ افزایش داد. علاوه بر این، دامنه جدید به کاربران حس حرفه‌ای بودن و اعتماد را القا کرد، که در جذب کسب‌وکارهای کوچک برای استفاده از سرویس نقش کلیدی داشت.
+                                در عرض یک سال پس از تغییر دامنه، تعداد تراکنش‌های پردازش‌شده توسط اسکوئر بیش از 400٪ افزایش یافت، که بخش عمده آن به دلیل برندینگ قوی و سهولت اشتراک‌گذاری دامنه بود. دامنه Square.com همچنین تأثیر قابل‌توجهی بر سئو داشت. نام کوتاه و مرتبط با محصول، رتبه‌بندی اسکوئر را در موتورهای جستجو بهبود بخشید و ترافیک ارگانیک را تا 250٪ افزایش داد. علاوه بر این، دامنه جدید به کاربران حس حرفه‌ای بودن و اعتماد را القا کرد، که در جذب کسب‌وکارهای کوچک برای استفاده از سرویس نقش کلیدی داشت.
                             </p>
                             <p>
                                 از منظر بازاریابی، دامنه Square.com به اسکوئر امکان داد تا به سرعت در بازار فناوری مالی جا بیفتد. این دامنه در تبلیغات، ایمیل‌ها و مکالمات روزمره به راحتی قابل استفاده بود. در نتیجه، اسکوئر به یکی از پیشروترین سرویس‌های پرداخت موبایلی تبدیل شد. این داستان نشان می‌دهد که یک دامنه استراتژیک مانند طلاکوب می‌تواند چگونه به رشد یک کسب‌وکار کمک کند. برای اطلاعات بیشتر درباره خرید دامنه طلاکوب، <a href="#main-content">اینجا کلیک کنید</a>.
@@ -1671,13 +1667,13 @@
                     <article class="article-card reverse" role="article">
                         <h3>داستان موفقیت اینستاگرام: از Burbn به یک برند جهانی</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/GtLtG6wL/instagam.jpg" alt="لوگوی Instagram.com مرتبط با شبکه اجتماعی" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/VNk0VZhT/instagam.jpg" alt="لوگوی Instagram.com مرتبط با شبکه اجتماعی" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
-                                    دامنه Instagram.com در سال ۲۰۱۰ به قیمت تقریبی ۱۰۰,۰۰۰ دلار خریداری شد. این سرمایه‌گذاری منجر به جذب ۱ میلیون کاربر در چند ماه و خرید ۱ میلیارد دلاری توسط فیسبوک در سال ۲۰۱۲ شد.
+                                    دامنه Instagram.com در سال 1389 به قیمت تقریبی 100,000 دلار خریداری شد. این سرمایه‌گذاری منجر به جذب 1 میلیون کاربر در چند ماه و خرید 1 میلیارد دلاری توسط فیسبوک در سال 1391 شد.
                                 </p>
                                 <p>
-                                    اینستاگرام در ابتدا با نام "Burbn" و دامنه‌ای غیرجذاب شروع به کار کرد. در سال ۲۰۱۰، کوین سیستروم و مایک کریگر محصولی را توسعه دادند که ترکیبی از اشتراک‌گذاری مکان و عکس بود، اما نام Burbn گنگ و غیرمرتبط با تجربه کاربری محصول بود. پس از بازخوردهای اولیه، تیم تصمیم گرفت تمرکز خود را بر اشتراک‌گذاری عکس قرار دهد و نام و دامنه را به Instagram.com تغییر داد.
+                                    اینستاگرام در ابتدا با نام "Burbn" و دامنه‌ای غیرجذاب شروع به کار کرد. در سال 1389، کوین سیستروم و مایک کریگر محصولی را توسعه دادند که ترکیبی از اشتراک‌گذاری مکان و عکس بود، اما نام Burbn گنگ و غیرمرتبط با تجربه کاربری محصول بود. پس از بازخوردهای اولیه، تیم تصمیم گرفت تمرکز خود را بر اشتراک‌گذاری عکس قرار دهد و نام و دامنه را به Instagram.com تغییر داد.
                                 </p>
                                 <p>
                                     دامنه Instagram.com، که از ترکیب "Instant" و "Telegram" الهام گرفته شده بود، نه‌تنها کوتاه و به‌یادماندنی بود، بلکه مستقیماً حس سرعت و ارتباط بصری را منتقل می‌کرد. به همین ترتیب، دامنه طلاکوب حس لوکس و کیفیت را برای برندهای طلا و جواهرات منتقل می‌کند.
@@ -1697,7 +1693,7 @@
                     <article class="article-card" role="article">
                         <h3>داستان موفقیت توییتر: از Twttr به یک پلتفرم جهانی</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/3rtJzSQG/twitter.gif" alt="لوگوی Twitter.com مرتبط با شبکه اجتماعی" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/MZddG79x/twitter.gif" alt="لوگوی Twitter.com مرتبط با شبکه اجتماعی" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
                                     دامنه Twitter.com در سال ۲۰۰۶ به قیمت تقریبی ۵۰,۰۰۰ دلار خریداری شد. این سرمایه‌گذاری منجر به افزایش ۴۰۰ درصدی کاربران و رتبه‌بندی بالای سئو شد.
@@ -1723,7 +1719,7 @@
                     <article class="article-card reverse" role="article">
                         <h3>داستان موفقیت دراپ‌باکس: از GetDropbox به یک برند ذخیره‌سازی ابری</h3>
                         <div class="article-top">
-                            <img src="https://i.postimg.cc/zBS3L8Q2/dropbox.gif" alt="لوگوی Dropbox.com مرتبط با ذخیره‌سازی ابری" class="article-image" loading="lazy" width="300" height="200">
+                            <img src="https://i.postimg.cc/FK6znr3d/dropbox.gif" alt="لوگوی Dropbox.com مرتبط با ذخیره‌سازی ابری" class="article-image" loading="lazy" width="300" height="200">
                             <div class="article-content">
                                 <p>
                                     دامنه Dropbox.com در سال ۲۰۰۸ به قیمت تقریبی ۵۰,۰۰۰ دلار خریداری شد. این سرمایه‌گذاری منجر به جذب ۱۰۰ میلیون کاربر تا سال ۲۰۱۲ و درآمد ۲۰۰ میلیون دلاری تا سال ۲۰۱۳ شد.
@@ -1749,7 +1745,7 @@
                     <article class="article-card reverse" role="article">
           <h3>داستان موفقیت Airbnb: از AirBedAndBreakfast به یک برند جهانی</h3>
           <div class="article-top">
-            <img src="https://i.postimg.cc/pL4m408C/airbnb.gif" alt="لوگوی Airbnb.com مرتبط با موفقیت دامنه" class="article-image" loading="lazy">
+            <img src="https://i.postimg.cc/bJ2J7796/airbnb.gif" alt="لوگوی Airbnb.com مرتبط با موفقیت دامنه" class="article-image" loading="lazy">
             <div class="article-content">
               <p>
                 دامنه Airbnb.com در سال ۲۰۰۸ به قیمت تقریبی ۱۰,۰۰۰ دلار خریداری شد. این سرمایه‌گذاری منجر به جذب ۱۰ میلیون رزرو تا سال ۲۰۱۲ و ارزش‌گذاری ۳۱ میلیارد دلاری تا سال ۲۰۱۷ شد.
