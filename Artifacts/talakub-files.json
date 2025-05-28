@@ -1,0 +1,20 @@
+[
+  {
+    "file_name": "کنترل پنل موقت دیتااینتری طلاکوب",
+    "tag": "Talakub-admin-v1",
+    "artifact_id": "b3f8c7e1-5d2a-4f9b-8e3c-4a6b7d8e9f0a",
+    "upload_date": "۶ تیر ۱۴۰۴",
+    "message_number": 128,
+    "notes": "کنترل پنل موقت برای دیتااینتری سایت طلاکوب",
+    "content_url": "https://raw.githubusercontent.com/Edwinlatifi/talakub-site/refs/heads/master/Artifacts/admin.html"
+  },
+  {
+    "file_name": "اسکریپت کنترل پنل طلاکوب",
+    "tag": "Talakub-admin-js-v1",
+    "artifact_id": "c4g9d8f2-6e3b-5g0c-9f4d-5b7c8e9f0a1b",
+    "upload_date": "۶ تیر ۱۴۰۴",
+    "message_number": 128,
+    "notes": "اسکریپت جاوااسکریپت برای کنترل پنل موقت",
+    "content_url": "https://raw.githubusercontent.com/Edwinlatifi/talakub-site/refs/heads/master/Artifacts/admin.js"
+  }
+]
