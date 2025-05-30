@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2025-05-30T10:01:00Z",
+  "exportTime": "2025-05-30T10:15:00Z",
   "containerVersion": {
     "accountId": "your_account_id",
     "containerId": "GTM-W3KLP4M8",
@@ -24,34 +24,15 @@
             "value": "page_view"
           },
           {
-            "type": "list",
             "key": "eventParameters",
-            "list": [
+            "value": [
               {
-                "type": "map",
-                "map": [
-                  {
-                    "key": "name",
-                    "value": "page_title"
-                  },
-                  {
-                    "key": "value",
-                    "value": "{{Page Title}}"
-                  }
-                ]
+                "name": "page_title",
+                "value": "{{Page Title}}"
               },
               {
-                "type": "map",
-                "map": [
-                  {
-                    "key": "name",
-                    "value": "page_path"
-                  },
-                  {
-                    "key": "value",
-                    "value": "{{Page Path}}"
-                  }
-                ]
+                "name": "page_path",
+                "value": "{{Page Path}}"
               }
             ]
           }
@@ -71,21 +52,11 @@
             "value": "homepage_view"
           },
           {
-            "type": "list",
             "key": "eventParameters",
-            "list": [
+            "value": [
               {
-                "type": "map",
-                "map": [
-                  {
-                    "key": "name",
-                    "value": "page_title"
-                  },
-                  {
-                    "key": "value",
-                    "value": "{{Page Title}}"
-                  }
-                ]
+                "name": "page_title",
+                "value": "{{Page Title}}"
               }
             ]
           }
