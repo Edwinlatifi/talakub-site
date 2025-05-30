@@ -1,0 +1,14 @@
+title: Talakub
+description: سایت طلا و جواهرات طلاکوب
+baseurl: ""
+url: "https://talakub.com"
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path
+  news:
+    output: true
+    permalink: /news/:path
+  blog:
+    output: true
+    permalink: /blog/:path
