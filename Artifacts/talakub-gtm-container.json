@@ -2,61 +2,92 @@
   "exportFormatVersion": 2,
   "exportTime": "2025-05-30T10:45:00Z",
   "containerVersion": {
-    "accountId": "your_account_id",
-    "containerId": "GTM-W3KLP4M8",
-    "containerVersionId": "1",
+    "accountId": "6297433853",
+    "containerId": "221322303",
+    "containerVersionId": "4",
     "container": {
+      "path": "accounts/6297433853/containers/221322303",
+      "accountId": "6297433853",
+      "containerId": "221322303",
+      "name": "talakub.com",
       "publicId": "GTM-W3KLP4M8",
       "usageContext": ["WEB"],
-      "name": "Talakub Gold & Jewelry Container"
+      "fingerprint": "1748592085952",
+      "tagIds": ["GTM-W3KLP4M8"]
     },
     "tag": [
       {
-        "name": "GA4 - Page View - All Pages",
-        "type": "gaawe",
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "tagId": "6",
+        "name": "GA4 - Page View",
+        "type": "googtag",
         "parameter": [
           {
-            "key": "measurementId",
+            "type": "TEMPLATE",
+            "key": "tagId",
             "value": "G-9H3F0GEDG0"
           },
           {
-            "key": "eventName",
-            "value": "page_view"
-          },
-          {
+            "type": "TEMPLATE",
             "key": "sendPageView",
             "value": "true"
           }
         ],
-        "triggerId": ["1"]
+        "firingTriggerId": ["2147479573"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
       },
       {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "tagId": "7",
         "name": "GA4 - Homepage View",
-        "type": "gaawe",
+        "type": "googtag",
         "parameter": [
           {
-            "key": "measurementId",
+            "type": "TEMPLATE",
+            "key": "tagId",
             "value": "G-9H3F0GEDG0"
           },
           {
+            "type": "TEMPLATE",
             "key": "eventName",
             "value": "homepage_view"
           },
           {
+            "type": "TEMPLATE",
             "key": "page_title",
             "value": "{{Page Title}}"
           }
         ],
-        "triggerId": ["2"]
+        "firingTriggerId": ["2"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
       }
     ],
     "trigger": [
       {
-        "triggerId": "1",
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "triggerId": "2147479573",
         "name": "All Pages",
-        "type": "PAGEVIEW"
+        "type": "PAGEVIEW",
+        "fingerprint": "1748588867082"
       },
       {
+        "accountId": "6297433853",
+        "containerId": "221322303",
         "triggerId": "2",
         "name": "Homepage",
         "type": "PAGEVIEW",
@@ -65,26 +96,65 @@
             "type": "EQUALS",
             "parameter": [
               {
+                "type": "TEMPLATE",
                 "key": "pagePath",
                 "value": "/"
               }
             ]
           }
-        ]
+        ],
+        "fingerprint": "1748592085952"
       }
     ],
     "variable": [
       {
-        "name": "Page Title",
+        "accountId": "6297433853",
+        "containerId": "221322303",
         "variableId": "1",
+        "name": "Page Title",
         "type": "jsm",
         "parameter": [
           {
+            "type": "TEMPLATE",
             "key": "javascript",
             "value": "function() { return document.title; }"
           }
-        ]
+        ],
+        "fingerprint": "1748592085952"
       }
-    ]
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
+      },
+      {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "type": "REFERRER",
+        "name": "Referrer"
+      },
+      {
+        "accountId": "6297433853",
+        "containerId": "221322303",
+        "type": "EVENT",
+        "name": "Event"
+      }
+    ],
+    "fingerprint": "1748592085952"
   }
 }
