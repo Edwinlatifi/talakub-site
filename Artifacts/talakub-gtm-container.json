@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2025-05-30T08:35:00Z",
+  "exportTime": "2025-05-30T09:46:00Z",
   "containerVersion": {
     "accountId": "your_account_id",
     "containerId": "GTM-W3KLP4M8",
@@ -15,13 +15,50 @@
         "name": "GA4 - Page View - All Pages",
         "type": "gaawe",
         "parameter": [
-          {"key": "trackingId", "value": "G-9H3F0GEDG0"},
-          {"key": "eventName", "value": "page_view"},
           {
+            "type": "template",
+            "key": "trackingId",
+            "value": "G-9H3F0GEDG0"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "page_view"
+          },
+          {
+            "type": "list",
             "key": "eventParameters",
             "list": [
-              {"key": "page_title", "value": "{{Page Title}}"},
-              {"key": "page_path", "value": "{{Page Path}}"}
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "page_title"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{Page Title}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "page_path"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{Page Path}}"
+                  }
+                ]
+              }
             ]
           }
         ],
@@ -31,12 +68,35 @@
         "name": "GA4 - Homepage View",
         "type": "gaawe",
         "parameter": [
-          {"key": "trackingId", "value": "G-9H3F0GEDG0"},
-          {"key": "eventName", "value": "homepage_view"},
           {
+            "type": "template",
+            "key": "trackingId",
+            "value": "G-9H3F0GEDG0"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "homepage_view"
+          },
+          {
+            "type": "list",
             "key": "eventParameters",
             "list": [
-              {"key": "page_title", "value": "{{Page Title}}"}
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "page_title"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{Page Title}}"
+                  }
+                ]
+              }
             ]
           }
         ],
@@ -57,7 +117,11 @@
           {
             "type": "EQUALS",
             "parameter": [
-              {"key": "pagePath", "value": "/"}
+              {
+                "type": "template",
+                "key": "pagePath",
+                "value": "/"
+              }
             ]
           }
         ]
@@ -70,6 +134,7 @@
         "type": "jsm",
         "parameter": [
           {
+            "type": "template",
             "key": "javascript",
             "value": "function() { return document.title; }"
           }
@@ -81,6 +146,7 @@
         "type": "jsm",
         "parameter": [
           {
+            "type": "template",
             "key": "javascript",
             "value": "function() { return window.location.pathname; }"
           }
