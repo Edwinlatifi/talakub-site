@@ -4,7 +4,7 @@
   "containerVersion": {
     "accountId": "your_account_id",
     "containerId": "GTM-W3KLP4M8",
-    "containerVersionId": "0",
+    "containerVersionId": "1",
     "container": {
       "publicId": "GTM-W3KLP4M8",
       "usageContext": ["WEB"],
