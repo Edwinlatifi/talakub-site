@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "گردنبند طلای 18 عیار",
+    "price": 15000000,
+    "image": "https://talakub.com/images/necklace1.jpg",
+    "description": "گردنبند زیبا با طراحی مدرن"
+  },
+  {
+    "id": 2,
+    "name": "انگشتر الماس",
+    "price": 25000000,
+    "image": "https://talakub.com/images/ring1.jpg",
+    "description": "انگشتر با نگین الماس اصل"
+  }
+]
