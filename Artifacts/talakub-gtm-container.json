@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2025-05-30T10:30:00Z",
+  "exportTime": "2025-05-30T10:45:00Z",
   "containerVersion": {
     "accountId": "your_account_id",
     "containerId": "GTM-W3KLP4M8",
@@ -16,7 +16,7 @@
         "type": "gaawe",
         "parameter": [
           {
-            "key": "trackingId",
+            "key": "measurementId",
             "value": "G-9H3F0GEDG0"
           },
           {
@@ -24,12 +24,8 @@
             "value": "page_view"
           },
           {
-            "key": "page_title",
-            "value": "{{Page Title}}"
-          },
-          {
-            "key": "page_path",
-            "value": "{{Page Path}}"
+            "key": "sendPageView",
+            "value": "true"
           }
         ],
         "triggerId": ["1"]
@@ -39,7 +35,7 @@
         "type": "gaawe",
         "parameter": [
           {
-            "key": "trackingId",
+            "key": "measurementId",
             "value": "G-9H3F0GEDG0"
           },
           {
@@ -86,17 +82,6 @@
           {
             "key": "javascript",
             "value": "function() { return document.title; }"
-          }
-        ]
-      },
-      {
-        "name": "Page Path",
-        "variableId": "2",
-        "type": "jsm",
-        "parameter": [
-          {
-            "key": "javascript",
-            "value": "function() { return window.location.pathname; }"
           }
         ]
       }
