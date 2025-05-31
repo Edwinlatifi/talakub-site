@@ -2,9 +2,44 @@
 layout: default
 title: مقالات (تست)
 ---
-<h1>مقالات</h1>
-<ul>
-{% for item in site.data.articles %}
-  <li><a href="/{{ item.slug }}">{{ item.title }}</a> - {{ item.date }}</li>
-{% endfor %}
-</ul>
+<section class="articles-section">
+  <h2 class="screen-reader-only">فیلتر مقالات</h2>
+  <div class="article-filter">
+    <button class="active" onclick="filterArticles('all')" role="button" tabindex="0">همه</button>
+    <button onclick="filterArticles('gold')" role="button" tabindex="0">طلاکوب و طلا</button>
+    <button onclick="filterArticles('branding')" role="button" tabindex="0">برندینگ</button>
+    <button onclick="filterArticles('domain')" role="button" tabindex="0">دامنه</button>
+  </div>
+  <h2 class="screen-reader-only">لیست مقالات</h2>
+  <div class="articles-grid">
+    {% for item in site.data.articles %}
+    <article class="article-card" data-category="{{ item.category | default: 'gold' }}" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="datePublished" content="{{ item.date }}">
+      <meta itemprop="author" content="تیم طلاکوب">
+      <img src="{{ item.image | default: 'https://i.postimg.cc/dQXP1ZQ7/talakub5.png' }}" alt="{{ item.title }}" loading="lazy">
+      <div class="article-content">
+        <h3 itemprop="headline">{{ item.title }}</h3>
+        <p itemprop="description">{{ item.description | default: item.content | truncate: 100 }} <a href="/{{ item.slug }}">ادامه مطلب</a></p>
+        <div class="article-meta">
+          <span>تیم طلاکوب</span> | <time datetime="{{ item.date }}">{{ item.date | date: "%-d %B %Y" }}</time>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<script>
+  function filterArticles(category) {
+    const articles = document.querySelectorAll('.article-card');
+    const buttons = document.querySelectorAll('.article-filter button');
+    buttons.forEach(button => button.classList.remove('active'));
+    event.target.classList.add('active');
+    articles.forEach(article => {
+      if (category === 'all' || article.dataset.category === category) {
+        article.style.display = 'block';
+      } else {
+        article.style.display = 'none';
+      }
+    });
+  }
+</script>

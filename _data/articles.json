@@ -1,9 +1,22 @@
 [
   {
     "id": 1,
-    "title": "چگونه طلای اصل را تشخیص دهیم؟",
-    "content": "در این مقاله نکات کلیدی برای خرید طلای اصل بررسی می‌شود...",
-    "slug": "https://talakub.com/article/1",
-    "date": "2024-05-30"
+    "title": "داستان موفقیت Tiffany & Co: تقویت اعتبار برند",
+    "description": "Tiffany & Co با انتخاب یک دامنه .com ساده و به‌یادماندنی، هویت دیجیتال خود را تقویت کرد.",
+    "content": "متن کامل مقاله...",
+    "slug": "articles/tiffany-success",
+    "date": "2025-05-21",
+    "category": "branding",
+    "image": "https://i.postimg.cc/P5zqhbZj/Tiffany.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Cartier: تحول فروش آنلاین",
+    "description": "Cartier با سرمایه‌گذاری روی یک دامنه .com قوی، فروش آنلاین خود را چند برابر کرد.",
+    "content": "متن کامل مقاله...",
+    "slug": "articles/cartier-online",
+    "date": "2025-05-20",
+    "category": "gold",
+    "image": "https://i.postimg.cc/fb8TSwBq/Cartier.jpg"
   }
 ]
