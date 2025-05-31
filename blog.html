@@ -1,0 +1,10 @@
+---
+layout: default
+title: وبلاگ
+---
+<h1>وبلاگ</h1>
+<ul>
+{% for item in site.data.blog %}
+  <li><a href="/{{ item.slug }}">{{ item.title }}</a> - {{ item.date }}</li>
+{% endfor %}
+</ul>
