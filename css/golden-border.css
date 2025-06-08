@@ -1,0 +1,58 @@
+```css
+.golden-border {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: linear-gradient(
+    to bottom,
+    #8B4513 0%,
+    #8B4513 14.28%,
+    #DAA520 14.28%,
+    #DAA520 28.57%,
+    #FFD700 28.57%,
+    #FFD700 42.86%,
+    #FFFFFF 42.86%,
+    #FFFFFF 57.14%,
+    #FFD700 57.14%,
+    #FFD700 71.43%,
+    #DAA520 71.43%,
+    #DAA520 85.71%,
+    #8B4513 85.71%,
+    #8B4513 100%
+  );
+  z-index: 1000;
+  overflow: visible;
+}
+
+.golden-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  animation: shadowMove 3s linear infinite;
+}
+
+.golden-border::after,
+.golden-border-container::after {
+  display: none;
+}
+
+.golden-border-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: transparent;
+  z-index: 1001;
+}
+@keyframes shadowMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+```

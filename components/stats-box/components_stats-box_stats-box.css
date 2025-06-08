@@ -1,0 +1,20 @@
+```css
+.stats-box {
+  background: var(--dark-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-gold);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.stats-box h2 {
+  color: var(--gold-1);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.stats-box p {
+  margin-bottom: 10px;
+}
+```

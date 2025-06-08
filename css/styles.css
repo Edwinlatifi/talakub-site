@@ -1,0 +1,139 @@
+```css
+/* Defining Vazirmatn font faces */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../assets/fonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 400; /* Regular */
+  background: var(--dark-bg); /* قابل تغییر به تصویر در صورت نیاز */
+  color: var(--text-light);
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--light-bg);
+  z-index: 999;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 900; /* Black */
+  color: var(--gold-1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700; /* Bold */
+  color: var(--gold-2);
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold */
+  color: var(--gold-3);
+  margin-bottom: 10px;
+}
+
+p, a, span, li {
+  font-size: 1rem;
+  font-weight: 400; /* Regular */
+  color: var(--text-light);
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--gold-1);
+}
+
+/* Buttons */
+button, .btn {
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 700; /* Bold */
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(135deg, var(--gold-3), var(--gold-1));
+}
+
+/* Layout */
+main, .main-content {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 2rem 20px;
+}
+
+footer, .site-footer {
+  background: var(--dark-bg);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--border-gold);
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer p {
+  font-weight: 400; /* Regular */
+  color: var(--text-light);
+}
+```

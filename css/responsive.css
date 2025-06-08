@@ -1,0 +1,54 @@
+```css
+@media (max-width: 1024px) {
+  .nav-slogan { font-size: 1.5rem; }
+  .header-text h2 { font-size: 2rem; }
+  .hero-logo { width: 140px; height: 140px; }
+  .hero-ring { width: 180px; height: 180px; }
+  .price-row { font-size: 0.9rem; }
+  .price-table { padding: 15px; }
+  .info-section h1 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .top-nav { height: 60px; }
+  .nav-container { flex-direction: column; padding: 10px 0; }
+  .nav-logo { width: 40px; height: 40px; }
+  .nav-slogan { font-size: 1.2rem; position: static; transform: none; margin: 10px 0; }
+  .nav-social { gap: 5px; }
+  .nav-social a { width: 30px; height: 30px; }
+  .nav-social a img { width: 20px; height: 20px; }
+  .nav-social .phone { font-size: 0.9rem; padding: 5px 10px; }
+  .nav-social .phone-icon { display: flex; }
+  .nav-social .phone { display: none; }
+  .icon-nav { width: 50px; height: auto; right: 10px; }
+  .icon-nav svg { width: 24px; height: 24px; }
+  .hero { height: 250px; }
+  .hero-logo { width: 120px; height: 120px; }
+  .hero-ring { width: 160px; height: 160px; }
+  .header-text h2 { font-size: 1.5rem; }
+  .price-row { grid-template-columns: 40px 1fr 1fr 1fr 1fr; font-size: 0.8rem; }
+  .price-table { padding: 10px; }
+  .info-section { padding: 20px; }
+  .info-section h1 { font-size: 1.8rem; }
+  .cta-buttons { flex-direction: column; }
+  .cta-button { width: 100%; justify-content: center; }
+  .articles-grid { gap: 15px; }
+  .article-card { padding: 15px; }
+  .domains-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .nav-slogan { font-size: 1rem; }
+  .header-text h2 { font-size: 1.2rem; }
+  .hero { height: 200px; }
+  .hero-logo { width: 100px; height: 100px; }
+  .hero-ring { width: 140px; height: 140px; }
+  .price-row { grid-template-columns: 30px 1fr 1fr 1fr; }
+  .price-row span:nth-child(5) { display: none; }
+  .price-table { padding: 5px; }
+  .info-section h1 { font-size: 1.5rem; }
+  .news-section h2, .why-talakub-section h2, .faq-section h2, .articles-section h2, .blog-section h2, .other-domains-section h2, .price-estimate-section h2 { font-size: 1.5rem; }
+  .article-image { height: 150px; }
+  .domain-card img { height: 150px; }
+}
+```

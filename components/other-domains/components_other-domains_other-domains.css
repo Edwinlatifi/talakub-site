@@ -1,0 +1,51 @@
+```css
+.other-domains-section {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--dark-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+}
+
+.other-domains-section h2 {
+  font-size: 2rem;
+  color: var(--gold-1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.domain-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+}
+
+.domain-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.domain-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--gold-1);
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.domain-card:hover .domain-overlay {
+  transform: translateY(0);
+}
+```

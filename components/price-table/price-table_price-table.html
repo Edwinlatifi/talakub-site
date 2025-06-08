@@ -1,0 +1,115 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script>```html
+<div id="price-table" class="price-table">
+  <div class="price-title-row">قیمت‌های لحظه‌ای بازار</div>
+  <div class="price-row price-header">
+    <span class="icon-column"></span>
+    <span>نوع</span>
+    <span>قیمت</span>
+    <span>تغییر (%)</span>
+    <span>آخرین آپدیت</span>
+  </div>
+  <div class="price-row" data-name="بورس">
+    <span class="icon-column"><i class="fas fa-chart-line"></i></span>
+    <span>بورس</span>
+    <span>3,101,955</span>
+    <span>0%</span>
+    <span>۹:۴۹:۳۹</span>
+  </div>
+  <div class="price-row" data-name="انس طلا">
+    <span class="icon-column"><i class="fas fa-coins"></i></span>
+    <span>انس طلا</span>
+    <span>3,353.26</span>
+    <span>0.01%</span>
+    <span>۹:۴۹:۴۳</span>
+  </div>
+  <div class="price-row" data-name="مثقال طلا">
+    <span class="icon-column"><i class="fas fa-balance-scale"></i></span>
+    <span>مثقال طلا</span>
+    <span>287,110,000</span>
+    <span>0%</span>
+    <span>۹:۴۹:۴۳</span>
+  </div>
+  <div class="price-row" data-name="طلا 18 عیار">
+    <span class="icon-column"><i class="fas fa-ring"></i></span>
+    <span>طلا 18 عیار</span>
+    <span>66,173,000</span>
+    <span>0%</span>
+    <span>۹:۴۹:۴۳</span>
+  </div>
+  <div class="price-row" data-name="سکه">
+    <span class="icon-column"><i class="fas fa-medal"></i></span>
+    <span>سکه</span>
+    <span>738,850,000</span>
+    <span>0%</span>
+    <span>۹:۴۹:۴۳</span>
+  </div>
+  <div class="price-row" data-name="دلار">
+    <span class="icon-column"><i class="fas fa-dollar-sign"></i></span>
+    <span>دلار</span>
+    <span>823,850</span>
+    <span>0%</span>
+    <span>۹:۴۹:۴۳</span>
+  </div>
+  <div class="price-row" data-name="یورو">
+    <span class="icon-column"><i class="fas fa-euro-sign"></i></span>
+    <span>یورو</span>
+    <span>ناموجود</span>
+    <span>0%</span>
+    <span>۹:۴۹:۴۴</span>
+  </div>
+  <div class="price-row" data-name="نفت برنت">
+    <span class="icon-column"><i class="fas fa-oil-can"></i></span>
+    <span>نفت برنت</span>
+    <span>65.52</span>
+    <span>0.09%</span>
+    <span>۹:۴۹:۴۴</span>
+  </div>
+  <div class="price-row" data-name="بیت کوین">
+    <span class="icon-column"><i class="fab fa-bitcoin"></i></span>
+    <span>بیت کوین</span>
+    <span>105,375.49</span>
+    <span>0.53%</span>
+    <span>۹:۴۹:۴۴</span>
+  </div>
+  <div id="price-loading">در حال بارگذاری...</div>
+</div>
+```

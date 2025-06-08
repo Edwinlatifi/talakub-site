@@ -1,0 +1,64 @@
+```css
+.hero {
+  background: url('https://i.postimg.cc/43ZdtDqm/header34.webp') center/cover no-repeat;
+  background-color: #000000;
+  padding: 0;
+  margin-top: 80px;
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold-3);
+  z-index: 901;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 20px;
+  color: #FFFFFF;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.header-text h2 {
+  font-size: 3rem;
+  font-family: 'Vazirmatn', sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+  display: block;
+  margin: 0;
+}
+```

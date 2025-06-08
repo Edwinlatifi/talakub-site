@@ -1,0 +1,74 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script>```html
+<section class="articles-section" id="articles" role="region" aria-label="مقالات مرتبط با موفقیت برندها">
+  <h2>مقالات</h2>
+  <div class="articles-grid">
+    <article class="article-card reverse" role="article">
+      <h3>داستان موفقیت CarInsurance.com: دامنه‌ای که صنعت بیمه را متحول کرد</h3>
+      <div class="article-top">
+        <img src="https://i.postimg.cc/CK8Rgjsg/Car-Insurance.png" alt="لوگوی CarInsurance.com مرتبط با موفقیت در صنعت بیمه" class="article-image" loading="lazy" width="300" height="200">
+        <div class="article-content">
+          <p>دامنه CarInsurance.com در سال ۲۰۱۰ به قیمت ۴۹.۷ میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به افزایش ۳۰۰ درصدی ترافیک ارگانیک و رشد قابل‌توجه درآمد شرکت شد.</p>
+          <p>در سال ۲۰۱۰، شرکت QuinStreet دامنه CarInsurance.com را خریداری کرد. این دامنه برای پلتفرم مقایسه بیمه خودرو آن‌ها انتخاب شد.</p>
+          <p>دامنه CarInsurance.com حس اعتماد و تخصص را منتقل می‌کرد و به QuinStreet کمک کرد تا در بازار رقابتی بیمه آنلاین پیشرو شود.</p>
+        </div>
+      </div>
+      <div class="article-fullwidth">
+        <p>پس از خرید دامنه، CarInsurance.com به یکی از پربازدیدترین پلتفرم‌های مقایسه بیمه تبدیل شد. ترافیک وب‌سایت و درآمد QuinStreet به طور قابل‌توجهی افزایش یافت.</p>
+      </div>
+    </article>
+    <article class="article-card" role="article">
+      <h3>داستان موفقیت Voice: دامنه‌ای برای آینده بلاکچین</h3>
+      <div class="article-top">
+        <img src="https://i.postimg.cc/9FSXQDMF/voice.jpg" alt="لوگوی Voice.com مرتبط با فناوری بلاکچین" class="article-image" loading="lazy" width="300" height="200">
+        <div class="article-content">
+          <p>دامنه Voice.com در سال 1398 به قیمت 30 میلیون دلار خریداری شد. این سرمایه‌گذاری منجر به جذب 151,000 بازدیدکننده ماهانه شد.</p>
+          <p>در سال 1398، شرکت بلاکچین Block.one دامنه Voice.com را خریداری کرد.</p>
+          <p>دامنه Voice.com حس نوآوری و اعتماد را منتقل می‌کرد.</p>
+        </div>
+      </div>
+      <div class="article-fullwidth">
+        <p>پس از خرید دامنه، Voice.com به سرعت توجه فعالان صنعت بلاکچین را جلب کرد.</p>
+      </div>
+    </article>
+  </div>
+</section>
+```

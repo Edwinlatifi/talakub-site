@@ -1,0 +1,105 @@
+```css
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-20);
+  margin: 40px 0;
+}
+
+.info-section {
+  background: var(--dark-bg);
+  padding: var(--padding-30);
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+  text-align: center;
+}
+
+.info-section h1 {
+  font-size: 2.5rem;
+  color: var(--gold-1);
+  margin-bottom: var(--margin-20);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-15);
+  flex-wrap: wrap;
+  margin-top: var(--margin-20);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  border-radius: var(--border-radius-8);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-1rem);
+  transition: all 0.3s ease;
+}
+
+.cta-button img {
+  width: var(--size-24);
+  height: var(--size-24);
+  margin-right: var(--margin-10);
+}
+
+.cta-button.whatsapp {
+  background: linear-gradient(135deg, var(--green-1), var(--green-2));
+  color: #fff;
+}
+
+.cta-button.whatsapp:hover {
+  background: linear-gradient(135deg, #20C05B, #0F6A5F);
+}
+
+.cta-button.telegram {
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  color: #fff;
+}
+
+.cta-button.telegram:hover {
+  background: linear-gradient(135deg, #0077b3, #004d80);
+}
+
+.cta-button.phone {
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+  color: #000;
+}
+
+.cta-button.phone:hover {
+  background: linear-gradient(135deg, #FFCC00, #A67C00);
+}
+
+.why-talakub-section, .faq-section, .price-estimate-section {
+  margin: 40px 0;
+  padding: var(--padding-20);
+  background: var(--dark-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+}
+
+.why-talakub-section h2, .faq-section h2, .price-estimate-section h2 {
+  font-size: 2rem;
+  color: var(--gold-1);
+  margin-bottom: var(--margin-20);
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: var(--margin-20);
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: var(--gold-2);
+  margin-bottom: var(--margin-10);
+}
+
+.section-divider {
+  height: 2px;
+  background: var(--border-gold);
+  margin: var(--margin-20) 0;
+}
+```
