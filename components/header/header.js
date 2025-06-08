@@ -1,9 +1,8 @@
-```javascript
 // ماژول هدر
 const Header = {
   async init(containerId = 'header-container') {
     try {
-      const response = await fetch('components/header/header.html');
+      const response = await fetch('/components/header/header.html');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
@@ -17,4 +16,3 @@ const Header = {
 if (document.getElementById('header-container')) {
   Header.init();
 }
-```

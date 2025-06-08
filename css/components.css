@@ -1,4 +1,3 @@
-```css
 .landing-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -102,4 +101,3 @@
   background: var(--border-gold);
   margin: var(--margin-20) 0;
 }
-```

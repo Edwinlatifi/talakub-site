@@ -1,4 +1,3 @@
-```css
 @keyframes shadowMove {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 0%; }
@@ -51,4 +50,3 @@
   animation: slideInLeft 1s ease-in-out forwards;
   animation-delay: 8s;
 }
-```

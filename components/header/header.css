@@ -1,4 +1,3 @@
-```css
 .hero {
   background: url('https://i.postimg.cc/43ZdtDqm/header34.webp') center/cover no-repeat;
   background-color: #000000;
@@ -55,10 +54,9 @@
 .header-text h2 {
   font-size: 3rem;
   font-family: 'Vazirmatn', sans-serif;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   will-change: opacity, transform;
   display: block;
   margin: 0;
 }
-```

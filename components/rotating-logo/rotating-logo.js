@@ -1,9 +1,8 @@
-```javascript
 // ماژول لوگوی چرخشی
 const RotatingLogo = {
   async init(containerId = 'rotating-logo-container') {
     try {
-      const response = await fetch('components/rotating-logo/rotating-logo.html');
+      const response = await fetch('/components/rotating-logo/rotating-logo.html');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
@@ -17,4 +16,3 @@ const RotatingLogo = {
 if (document.getElementById('rotating-logo-container')) {
   RotatingLogo.init();
 }
-```

@@ -1,43 +1,3 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script>```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -60,6 +20,10 @@
   <meta name="keywords" content="فروش دامنه, طلاکوب, طلا, جواهرات, Talakub, دامنه لوکس, سرمایه‌گذاری طلا, برند طلا, دامنه طلا و جواهرات, خرید دامنه لوکس">
   <meta name="author" content="Talakub.com">
   <meta name="robots" content="index, follow">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://i.postimg.cc https://talakub.com data:; connect-src 'self' https://www.google-analytics.com http://127.0.0.1:5500;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="language" content="fa">
   <link rel="canonical" href="https://talakub.com">
   <meta property="og:title" content="فروش دامنه طلاکوب | بهترین برای فروشندگان طلا">
@@ -68,6 +32,25 @@
   <meta property="og:url" content="https://talakub.com">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Arial' fill='%23000000'%3ET%3C/text%3E%3C/svg%3E">
+  <!-- منابع -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0//css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/golden-border.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/components/header/header.css">
+  <link rel="stylesheet" href="/components/navbar/navbar.css">
+  <link rel="stylesheet" href="/components/rotating-logo/rotating-logo.css">
+  <link rel="stylesheet" href="/components/news-box/news-box.css">
+  <link rel="stylesheet" href="/components/articles-box/articles-box.css">
+  <link rel="stylesheet" href="/components/blog-box/blog-box.css">
+  <link rel="stylesheet" href="/components/other-domains/other-domains.css">
+  <link rel="stylesheet" href="/components/stats-box/stats-box.css">
+  <link rel="stylesheet" href="/components/price-table/price-table.css">
+  <link rel="stylesheet" href="/components/security/security.css">
+  <script defer src="/components/security/security.js"></script>
   <!-- Schema Markup -->
   <script type="application/ld+json">
   {
@@ -124,33 +107,14 @@
     ]
   }
   </script>
-  <!-- کامپوننت امنیتی -->
-  <div id="security-container"></div>
-  <link rel="stylesheet" href="components/security/security.css">
-  <script src="components/security/security.js"></script>
-  <!-- سایر منابع -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/golden-border.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="components/header/header.css">
-  <link rel="stylesheet" href="components/navbar/navbar.css">
-  <link rel="stylesheet" href="components/rotating-logo/rotating-logo.css">
-  <link rel="stylesheet" href="components/news-box/news-box.css">
-  <link rel="stylesheet" href="components/articles-box/articles-box.css">
-  <link rel="stylesheet" href="components/blog-box/blog-box.css">
-  <link rel="stylesheet" href="components/other-domains/other-domains.css">
-  <link rel="stylesheet" href="components/stats-box/stats-box.css">
-  <link rel="stylesheet" href="components/price-table/price-table.css">
 </head>
 <body>
+  <div id="security-container"></div>
   <div id="navbar-container"></div>
   <div id="header-container"></div>
   <div class="golden-border-container">
     <div class="golden-border"></div>
+    <div id="rotating-logo-container"></div>
   </div>
   <div class="container">
     <div class="section-divider"></div>
@@ -210,18 +174,17 @@
     </footer>
     <div id="stats-box-container"></div>
   </div>
-  <script src="js/file-loader.js"></script>
-  <script src="js/price-fetcher.js"></script>
-  <script src="js/main.js"></script>
-  <script src="components/header/header.js"></script>
-  <script src="components/navbar/navbar.js"></script>
-  <script src="components/rotating-logo/rotating-logo.js"></script>
-  <script src="components/news-box/news-box.js"></script>
-  <script src="components/articles-box/articles-box.js"></script>
-  <script src="components/blog-box/blog-box.js"></script>
-  <script src="components/other-domains/other-domains.js"></script>
-  <script src="components/stats-box/stats-box.js"></script>
-  <script src="components/price-table/price-table.js"></script>
+  <script defer src="/js/file-loader.js"></script>
+  <script defer src="/js/price-fetcher.js"></script>
+  <script defer src="/js/main.js"></script>
+  <script defer src="/components/header/header.js"></script>
+  <script defer src="/components/navbar/navbar.js"></script>
+  <script defer src="/components/rotating-logo/rotating-logo.js"></script>
+  <script defer src="/components/news-box/news-box.js"></script>
+  <script defer src="/components/articles-box/articles-box.js"></script>
+  <script defer src="/components/blog-box/blog-box.js"></script>
+  <script defer src="/components/other-domains/other-domains.js"></script>
+  <script defer src="/components/stats-box/stats-box.js"></script>
+  <script defer src="/components/price-table/price-table.js"></script>
 </body>
 </html>
-```

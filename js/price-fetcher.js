@@ -1,4 +1,3 @@
-```javascript
 // ماژول PriceFetcher برای به‌روزرسانی قیمت‌های لحظه‌ای
 const PriceFetcher = {
   prices: [
@@ -50,4 +49,3 @@ const PriceFetcher = {
     });
   }
 };
-```

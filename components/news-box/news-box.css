@@ -1,5 +1,4 @@
-```css
-.blog-section {
+.news-section {
   margin: 40px 0;
   padding: 20px;
   background: var(--dark-bg);
@@ -7,7 +6,7 @@
   border: 1px solid var(--border-gold);
 }
 
-.blog-section h2 {
+.news-section h2 {
   font-size: 2rem;
   color: var(--gold-1);
   margin-bottom: 20px;
@@ -46,4 +45,3 @@
 .article-card.reverse .article-top {
   flex-direction: column-reverse;
 }
-```

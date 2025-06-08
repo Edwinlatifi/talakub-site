@@ -1,4 +1,3 @@
-```javascript
 // فایل اصلی جاوااسکریپت برای وب‌سایت طلاکوب
 document.addEventListener('DOMContentLoaded', () => {
   // راه‌اندازی PriceFetcher
@@ -23,4 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeInSections.forEach(section => observer.observe(section));
 });
-```

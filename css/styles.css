@@ -1,4 +1,3 @@
-```css
 /* Defining Vazirmatn font faces */
 @font-face {
   font-family: 'Vazirmatn';
@@ -136,4 +135,3 @@ footer p {
   font-weight: 400; /* Regular */
   color: var(--text-light);
 }
-```

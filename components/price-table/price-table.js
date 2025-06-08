@@ -1,4 +1,3 @@
-```javascript
 // ماژول PriceTable برای کامپوننت جدول قیمت قابل استفاده مجدد
 const PriceTable = {
   async init(containerId = 'price-table-container') {
@@ -24,4 +23,3 @@ const PriceTable = {
 if (document.getElementById('price-table-container')) {
   PriceTable.init();
 }
-```

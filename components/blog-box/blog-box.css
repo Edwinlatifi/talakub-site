@@ -1,5 +1,4 @@
-```css
-.articles-section {
+.blog-section {
   margin: 40px 0;
   padding: 20px;
   background: var(--dark-bg);
@@ -7,7 +6,7 @@
   border: 1px solid var(--border-gold);
 }
 
-.articles-section h2 {
+.blog-section h2 {
   font-size: 2rem;
   color: var(--gold-1);
   margin-bottom: 20px;
@@ -43,11 +42,6 @@
   margin-bottom: 10px;
 }
 
-.article-fullwidth {
-  margin-top: 15px;
-}
-
 .article-card.reverse .article-top {
   flex-direction: column-reverse;
 }
-```
