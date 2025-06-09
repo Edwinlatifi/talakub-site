@@ -1,11 +1,11 @@
 async function loadFile(elementId, filePath) {
     try {
         const response = await fetch(filePath);
-        if (!response.ok) throw new Error(??? ?? ??? ????: );
+        if (!response.ok) throw new Error(`خطا در لود فایل: ${filePath}`);
         const content = await response.text();
         document.getElementById(elementId).innerHTML = content;
     } catch (error) {
-        console.error('???:', error);
+        console.error('خطا:', error);
     }
 }
 
