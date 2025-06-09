@@ -2,7 +2,7 @@
 const StatsBox = {
   async init(containerId = 'stats-box-container') {
     try {
-      const response = await fetch('/components/stats-box/stats-box.html/');
+      const response = await fetch('componentsstats-box/stats-box.html/');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;

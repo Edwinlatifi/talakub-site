@@ -20,13 +20,13 @@ function loadFile(containerId, filePath) {
 
 // لود کامپوننت‌ها
 document.addEventListener('DOMContentLoaded', () => {
-  loadFile('security-container', '/components/security/security.html/');
-  loadFile('navbar-container', '/components/navbar/navbar.html/');
-  loadFile('header-container', '/components/header/header.html/');
-  loadFile('price-table-container', '/components/price-table/price-table.html/');
-  loadFile('news-box-container', '/components/news-box/news-box.html/');
-  loadFile('articles-box-container', '/components/articles-box/articles-box.html/');
-  loadFile('blog-box-container', '/components/blog-box/blog-box.html/');
-  loadFile('other-domains-container', '/components/other-domains/other-domains.html/');
-  loadFile('stats-box-container', '/components/stats-box/stats-box.html/');
+  loadFile('security-container', 'componentssecurity/security.html/');
+  loadFile('navbar-container', 'componentsnavbar/navbar.html/');
+  loadFile('header-container', 'componentsheader/header.html/');
+  loadFile('price-table-container', 'componentsprice-table/price-table.html/');
+  loadFile('news-box-container', 'componentsnews-box/news-box.html/');
+  loadFile('articles-box-container', 'componentsarticles-box/articles-box.html/');
+  loadFile('blog-box-container', 'componentsblog-box/blog-box.html/');
+  loadFile('other-domains-container', 'componentsother-domains/other-domains.html/');
+  loadFile('stats-box-container', 'componentsstats-box/stats-box.html/');
 });
