@@ -3,7 +3,7 @@ const PriceTable = {
   async init(containerId = 'price-table-container') {
     try {
       // بارگذاری قالب HTML
-      const response = await fetch('/price-table/price-table.html');
+      const response = await fetch('/price-table/price-table.html/');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;

@@ -2,7 +2,7 @@
 const OtherDomains = {
   async init(containerId = 'other-domains-container') {
     try {
-      const response = await fetch('/components/other-domains/other-domains.html');
+      const response = await fetch('/components/other-domains/other-domains.html/');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;

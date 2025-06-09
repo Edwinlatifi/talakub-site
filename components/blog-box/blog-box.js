@@ -2,7 +2,7 @@
 const BlogBox = {
   async init(containerId = 'blog-box-container') {
     try {
-      const response = await fetch('/components/blog-box/blog-box.html');
+      const response = await fetch('/components/blog-box/blog-box.html/');
       if (response.ok) {
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
