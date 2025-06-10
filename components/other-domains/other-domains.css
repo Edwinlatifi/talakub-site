@@ -1,14 +1,16 @@
 .other-domains-section {
-  margin: 40px 0;
+  width: 100%;
+  margin: 40px auto;
   padding: 20px;
   background: var(--dark-bg);
   border-radius: 12px;
   border: 1px solid var(--border-gold);
+  box-sizing: border-box;
 }
 
 .other-domains-section h2 {
   font-size: 2rem;
-  color: var(--gold-1);
+  color: #B8860B; /* Match dark golden from styles.css */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -27,7 +29,7 @@
 }
 
 .domain-card img {
-  width: 100%;
+  width: 300px;
   height: 200px;
   object-fit: cover;
 }
@@ -38,7 +40,7 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.8);
-  color: var(--gold-1);
+  color: #FFFFFF; /* White text for consistency */
   padding: 15px;
   transform: translateY(100%);
   transition: transform 0.3s ease;

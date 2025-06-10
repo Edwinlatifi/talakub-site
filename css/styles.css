@@ -11,9 +11,12 @@ html {
 
 body {
   font-family: 'Vazirmatn', sans-serif;
-  font-weight: 400; /* Regular */
-  background: var(--dark-bg); /* ???? ????? ?? ????? ?? ???? ???? */
-  color: var(--text-light);
+  font-weight: 400;
+  background: url('https://i.postimg.cc/5yJnMNRf/backgroun22.jpg') no-repeat center center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #FFFFFF; /* White for all text */
   line-height: 1.6;
   direction: rtl;
   text-align: right;
@@ -36,32 +39,39 @@ body {
   z-index: 999;
 }
 
+/* Content boxes (news, articles, etc.) */
+.content-box {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 /* Typography */
 h1 {
   font-size: 3rem;
   font-weight: 900; /* Black */
-  color: var(--gold-1);
+  color: #B8860B; /* Dark golden color for headers */
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 700; /* Bold */
-  color: var(--gold-2);
+  color: #B8860B; /* Dark golden color for headers */
   margin-bottom: 15px;
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 700; /* Bold */
-  color: var(--gold-3);
+  color: #B8860B; /* Dark golden color for headers */
   margin-bottom: 10px;
 }
 
 p, a, span, li {
   font-size: 1rem;
   font-weight: 400; /* Regular */
-  color: var(--text-light);
+  color: #FFFFFF; /* White for text */
 }
 
 a {
@@ -70,15 +80,15 @@ a {
 }
 
 a:hover {
-  color: var(--gold-1);
+  color: #B8860B; /* Dark golden on hover */
 }
 
 /* Buttons */
 button, .btn {
   font-family: 'Vazirmatn', sans-serif;
   font-weight: 700; /* Bold */
-  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
-  color: #000;
+  background: linear-gradient(135deg, #B8860B, #FFD700); /* Gradient from dark to light gold */
+  color: #000; /* Black text for contrast */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -87,7 +97,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background: linear-gradient(135deg, var(--gold-3), var(--gold-1));
+  background: linear-gradient(135deg, #FFD700, #B8860B); /* Reverse gradient on hover */
 }
 
 /* Layout */
@@ -101,12 +111,12 @@ footer, .site-footer {
   background: var(--dark-bg);
   text-align: center;
   padding: 20px;
-  border-top: 1px solid var(--border-gold);
+  border-top: 1px solid #B8860B; /* Dark golden border */
   width: 100%;
   margin-top: 20px;
 }
 
 footer p {
   font-weight: 400; /* Regular */
-  color: var(--text-light);
+  color: #FFFFFF; /* White for footer text */
 }
