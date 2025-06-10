@@ -2,7 +2,6 @@ const ArticlesBox = {
   init() {
     this.setupNavigation();
     this.setupDragScroll();
-    this.setupWheelScroll();
     this.setupSnapScroll();
   },
 
@@ -36,6 +35,7 @@ const ArticlesBox = {
       scrollContainer.classList.add('dragging');
       startX = e.pageX - scrollContainer.offsetLeft;
       scrollLeft = scrollContainer.scrollLeft;
+      e.preventDefault();
     });
 
     scrollContainer.addEventListener('mouseleave', () => {
@@ -60,6 +60,7 @@ const ArticlesBox = {
       isDragging = true;
       startX = e.touches[0].pageX - scrollContainer.offsetLeft;
       scrollLeft = scrollContainer.scrollLeft;
+      e.preventDefault();
     });
 
     scrollContainer.addEventListener('touchend', () => {
@@ -74,24 +75,11 @@ const ArticlesBox = {
     });
   },
 
-  setupWheelScroll() {
-    const scrollContainer = document.querySelector('.articles-scroll');
-    if (!scrollContainer) return;
-
-    scrollContainer.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      scrollContainer.scrollBy({
-        left: e.deltaY * 2,
-        behavior: 'smooth'
-      });
-    });
-  },
-
   setupSnapScroll() {
     const articlesSection = document.querySelector('.articles-section');
     if (!articlesSection) return;
 
-    document.body.style.scrollSnapType = 'y mandatory';
+    // document.body.style.scrollSnapType = 'y mandatory'; // کامنت برای تست گیر کردن صفحه
     articlesSection.style.scrollSnapAlign = 'start';
 
     const adjustHeight = () => {

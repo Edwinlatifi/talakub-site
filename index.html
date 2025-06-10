@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' https://i.postimg.cc;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+  ">
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H3F0GEDG0"></script>
   <script defer src="js/gtag.js"></script>
@@ -13,7 +21,6 @@
   <meta name="robots" content="index, follow">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://i.postimg.cc https://talakub.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;">  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="language" content="fa">
   <link rel="canonical" href="https://talakub.com/">
   <meta property="og:title" content="فروش دامنه طلاکوب | بهترین برای فروشندگان طلا">
@@ -111,6 +118,7 @@
   <script defer src="js/file-loader.js"></script>
   <script defer src="js/price-fetcher.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/inline.js"></script>
   <script defer src="components/security/security.js"></script>
   <script defer src="components/header/header.js"></script>
   <script defer src="components/navbar/navbar.js"></script>
